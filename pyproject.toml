@@ -1,0 +1,11 @@
+[tool.ruff]
+exclude = [
+    "notebooks",
+    "mlruns",
+    ".venv",
+    "venv",
+]
+
+[tool.ruff.lint]
+# Ignore unused-import/E402 project-wide only if you want to be lenient;
+# otherwise leave this empty so real source code is still linted strictly.
