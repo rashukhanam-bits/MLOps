@@ -27,3 +27,17 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t heart-disease-api .
+      
+      - name: Upload model artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trained-models
+          path: models/
+
+      - name: Upload MLflow run data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mlflow-runs
+          path: mlruns/

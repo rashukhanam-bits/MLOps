@@ -9,7 +9,8 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("heart-disease-api")
 
 app = FastAPI(title="Heart Disease Prediction API")
-model = joblib.load("../models/final_model.pkl")
+#model = joblib.load("../models/final_model.pkl")
+model = joblib.load("models/final_model.pkl")
 
 Instrumentator().instrument(app).expose(app)
 
